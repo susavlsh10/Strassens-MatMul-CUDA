@@ -17,40 +17,7 @@ for i in range(1, n + 1):
 **Strassen's Algorithm:**
 Strassen's algorithm divides matrices A, B, and C into equal-sized blocks, leading to a recursive approach for matrix multiplication. The product matrix C is computed using seven matrix multiplications and eighteen matrix additions, significantly reducing the number of multiplicative operations compared to the standard algorithm.
 
-Consider the following partitioning of the matrices into equal-sized blocks:
-
-𝐴 = [𝐴11 𝐴12]
-     [𝐴21 𝐴22]
-
-𝐵 = [𝐵11 𝐵12]
-     [𝐵21 𝐵22]
-
-𝐶 = [𝐶11 𝐶12]
-     [𝐶21 𝐶22]   (1)
-
-This partitioning allows for a straightforward approach to compute C:
-
-𝐶11 = 𝐴11𝐵11 + 𝐴12𝐵21
-𝐶12 = 𝐴11𝐵12 + 𝐴12𝐵22
-𝐶21 = 𝐴21𝐵11 + 𝐴22𝐵21
-𝐶22 = 𝐴21𝐵12 + 𝐴22𝐵22   (2)
-
-This approach requires 8 multiplications and 4 additions among matrices of size n/2 x n/2. Strassen’s algorithm computes the product as:
-
-𝐶11 = 𝑀1 + 𝑀4 - 𝑀5 + 𝑀7
-𝐶12 = 𝑀3 + 𝑀5
-𝐶21 = 𝑀2 + 𝑀4
-𝐶22 = 𝑀1 - 𝑀2 + 𝑀3 + 𝑀6  (3)
-
-Where:
-
-𝑀1 = (𝐴11 + 𝐴22)(𝐵11 + 𝐵22)
-𝑀2 = (𝐴21 + 𝐴22)𝐵11
-𝑀3 = 𝐴11(𝐵12 - 𝐵22)
-𝑀4 = 𝐴22(𝐵21 - 𝐵11)
-𝑀5 = (𝐴11 + 𝐴12)𝐵22
-𝑀6 = (𝐴21 - 𝐴11)(𝐵11 + 𝐵12)
-𝑀7 = (𝐴12 - 𝐴22)(𝐵21 + 𝐵22)  (4)
+![Strassen's Algorithm](https://github.com/susavlsh10/Strassens-MatMul-CUDA/blob/main/algorithm.png)
 
 
 
