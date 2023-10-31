@@ -32,3 +32,15 @@ The primary goals of this project are to:
 - Provide a clear and well-documented codebase for others to understand and use.
 
 This project aims to harness the power of GPUs to enhance the efficiency of matrix multiplication and may serve as a valuable tool for various scientific and computational applications.
+
+
+## Compilation and Execution
+
+To compile the code, follow these steps:
+
+```bash
+make
+
+./MatMul.exe <k> <k'>
+
+```
