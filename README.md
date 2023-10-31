@@ -44,6 +44,6 @@ make
 ./MatMul.exe <k> <k'>
 
 ```
-The size of the matrix (n x n) is determined by n = 2<sup>k</sup>, and the size of the terminal matrix (s x s) is determined by s = n / 2^k'
+The size of the matrix (n x n) is determined by n = 2<sup>k</sup>, and the size of the terminal matrix (s x s) is determined by s = n /2<sup>k'</sup>
 
 
