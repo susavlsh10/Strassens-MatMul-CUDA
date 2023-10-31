@@ -5,6 +5,15 @@
 **Project Overview:**
 This project aims to implement and parallelize Strassen's Matrix-Multiplication Algorithm using CUDA, a high-performance parallel computing platform and application programming interface (API). The algorithm efficiently computes the product matrix C from two matrices A and B, each of size n x n. The standard algorithm for matrix multiplication has a time complexity of O(n^3), while Strassen's algorithm reduces it to approximately O(n^2.8) operations.
 
+Standart algorithm
+
+```python
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        for k in range(1, n + 1):
+            𝐶𝑖𝑗 += 𝐴𝑖𝑘 * 𝐵𝑘𝑗
+```
+
 **Strassen's Algorithm:**
 Strassen's algorithm divides matrices A, B, and C into equal-sized blocks, leading to a recursive approach for matrix multiplication. The product matrix C is computed using seven matrix multiplications and eighteen matrix additions, significantly reducing the number of multiplicative operations compared to the standard algorithm.
 
